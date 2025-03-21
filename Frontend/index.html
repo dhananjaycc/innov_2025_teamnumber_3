@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AaushadiVan</title>
+  <link rel="stylesheet" href="./Asset/styles/landing.css">
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="firestore.js"></script>
+  
+
+
+</head>
+
+<body>
+  <!-- Navbar -->
+
+  <nav class="navbar">
+    <div class="logo">AaushadiVan</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#medico">Medicinal Plants</a></li>
+      <li><a href="garden.html">Virtual Tour</a></li>
+      <li><a href="#bottom">About</a></li>
+      <li><a href="#bottom">Contact</a></li>
+    </ul>
+    <div class="nav-buttons" id="nav-buttons">
+      <!-- <button class="btn login-btn" id="loginBtn" onclick="window.location.href='login.html';">Login</button> -->
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover the Healing Power of Nature</h1>
+      <p>Explore our Virtual Herbal Garden and learn about the wonders of medicinal plants from around the world.</p>
+      <button class="hero-btn" onclick="window.location.href='garden.html';">3D Garden Tour</button>
+    </div>
+  </section>
+
+  <!-- Medicinal Plants Section -->
+  <section  id="medico" class="plants-section">
+    <div class="container">
+      <h2>Explore Medicinal Plants</h2>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search plants by name or disease..." />
+      </div>
+
+      <div id="plantContainer" class="plant-grid"
+        style="display: flex; flex-wrap: wrap; gap: 45px; justify-content: center; align-items: center; ">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for Plant Details -->
+  <div id="plantModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">&times;</span>
+      <img id="modalImg" src="" alt="Plant Image">
+      <h2 id="modalName"></h2>
+      <p><strong>Description:</strong> <span id="modalDesc"></span></p>
+      <p><strong>Used for Diseases:</strong> <span id="modalDiseases"></span></p>
+      <p><strong>Medicinal Usage:</strong> <span id="modalUsage"></span></p>
+      <p><strong>Found Mostly:</strong> <span id="modalLocation"></span></p>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- Footer Section -->
+  <footer id="bottom" class="footer-section">
+    <div class="footer-container">
+      <div class="footer-card about">
+        <h3>About Us</h3>
+        <p>Discover the power of medicinal plants for a healthier life. At AaushadiVan, we provide insights, resources, and solutions to help you make informed choices. Explore, learn, and connect with our community. Have questions? Reach out through the form provided here!</p>
+      </div>
+      <div class="footer-card contact">
+        <h3>Contact Us</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="footer-card team">
+        <h3>Our Team</h3>
+        <ul>
+          <li>Pranay Metkari</li>
+          <li>Dhananjay Chaudhari</li>
+          <li>Ketan Patil</li>
+          <li>Sanket Patade</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 AaushadiVan. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href="#bottom"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#bottom').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+<script>
+  document.querySelectorAll('a[href="#medico"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector('#medico').scrollIntoView({ behavior: 'smooth' });
+      });
+  });
+</script>
+
+</body>
+
+</html>

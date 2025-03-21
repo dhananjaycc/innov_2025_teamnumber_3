@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AaushadiVan</title>
+  <link rel="stylesheet" href="./Asset/styles/landing.css">
+  <script defer src="landing.js"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">AaushadiVan</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#bottom">About</a></li>
+      <li><a href="#bottom">Contact</a></li>
+      
+    </ul>
+    <div class="nav-buttons" id="nav-buttons">
+      <button class="btn login-btn" id="loginBtn" onclick="window.location.href='login.html';">Login</button>
+    </div>
+    <div class="hamburger" id="hamburger">☰</div>
+  </nav>
+
+  <section class="hero">
+
+    <video autoplay muted loop playsinline class="background-video">
+        <source src="./Asset/WhatsApp Video 2025-03-21 at 1.56.44 AM.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <div class="hero-content">
+      <h1>Discover the Healing Power of Nature</h1>
+      <p>Explore our Virtual Herbal Garden and learn about the wonders of medicinal plants from around the world.</p>
+      <button class="hero-btn" onclick="window.location.href='login.html';">3D Herbal Garden Tour</button>
+    </div>
+  </section>
+
+ 
+
+  <!-- Footer -->
+  <footer id="bottom" class="footer-section">
+    <div class="footer-container">
+      <div class="footer-card about">
+        <h3>About Us</h3>
+        <p>Discover the power of medicinal plants for a healthier life. At AaushadiVan, we provide insights, resources, and solutions to help you make informed choices. Explore, learn, and connect with our community. Have questions? Reach out through the form provided here!</p>
+      </div>
+      <div class="footer-card contact">
+        <h3>Contact Us</h3>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <div class="footer-card team">
+        <h3>Our Team</h3>
+        <ul>
+          <li>Pranay Metkari</li>
+          <li>Dhananjay Chaudhari</li>
+          <li>Ketan Patil</li>
+          <li>Sanket Patade</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 AaushadiVan. All rights reserved.
+    </div>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('a[href="#bottom"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector('#bottom').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+</body>
+
+</html>
